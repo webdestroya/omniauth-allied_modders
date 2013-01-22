@@ -7,7 +7,7 @@ Strategy to auth with AlliedModders via OAuth2 in OmniAuth.
 Add to your `Gemfile`:
 
 ```ruby
-gem "omniauth-allied-modders"
+gem "omniauth-allied_modders"
 ```
 
 Then `bundle install`.
