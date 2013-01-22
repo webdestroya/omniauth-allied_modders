@@ -6,7 +6,7 @@ require 'rubygems'
 require 'bundler'
 require 'sinatra'
 require 'omniauth'
-require 'omniauth-alliedmodders'
+require 'omniauth-allied-modders'
 
 OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
 
@@ -34,7 +34,7 @@ use Rack::Session::Cookie, :secret => ENV['RACK_COOKIE_SECRET']
 
 use OmniAuth::Builder do
   # Regular usage
-  provider :allied_modders, ENV['GOOGLE_KEY'], ENV['GOOGLE_SECRET'], {}
+  provider :allied_modders, ENV['ALLIEDMODDERS_CLIENT_ID'], ENV['ALLIEDMODDERS_SECRET'], {}
   
   # Custom scope supporting youtube
   # provider :google_oauth2, ENV['GOOGLE_KEY'], ENV['GOOGLE_SECRET'], {:scope => 'http://gdata.youtube.com,userinfo.email,userinfo.profile,plus.me', :access_type => 'online', :approval_prompt => ''}

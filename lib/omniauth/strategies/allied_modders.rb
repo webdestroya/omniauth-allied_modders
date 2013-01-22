@@ -5,7 +5,7 @@ module OmniAuth
     class AlliedModders < OmniAuth::Strategies::OAuth2
 
       # Possible scopes: userinfo.email,userinfo.profile,plus.me
-      DEFAULT_SCOPE = "" # "userinfo.email" #,userinfo.profile"
+      DEFAULT_SCOPE = ""
 
       option :name, 'allied_modders'
       option :authorize_options, [:scope, :approval_prompt, :access_type, :state, :hd]

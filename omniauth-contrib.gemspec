@@ -4,7 +4,7 @@ require File.expand_path('../lib/omniauth/allied_modders/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.add_dependency 'omniauth', '~> 1.0'
 
-  gem.authors       = ["Mitch Dempsey", "Josh Ellithorpe", "Yury Korolev"]
+  gem.authors       = ["Mitch Dempsey"]
   gem.email         = ["mitch@mitchdempsey.com"]
   gem.description   = %q{A AlliedModders oauth2 strategy for OmniAuth 1.0}
   gem.summary       = %q{A AlliedModders oauth2 strategy for OmniAuth 1.0}
@@ -13,7 +13,7 @@ Gem::Specification.new do |gem|
   gem.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   gem.files         = `git ls-files`.split("\n")
   gem.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
-  gem.name          = "omniauth-alliedmodders"
+  gem.name          = "omniauth-allied-modders"
   gem.require_paths = ["lib"]
   gem.version       = OmniAuth::AlliedModders::VERSION
 

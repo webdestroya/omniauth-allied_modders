@@ -1,5 +1,5 @@
 require 'spec_helper'
-require 'omniauth-alliedmodders'
+require 'omniauth-allied-modders'
 
 describe OmniAuth::Strategies::AlliedModders do
   def app; lambda{|env| [200, {}, ["Hello."]]} end
