@@ -55,7 +55,10 @@ module OmniAuth
       end
 
       def raw_info
-        @raw_info ||= access_token.get('https://forums.alliedmods.net/oauth/userinfo.php').parsed
+        uinfo = access_token.get('https://forums.alliedmods.net/oauth/userinfo.php')
+        puts uinfo.inspect
+        puts uinfo.parsed.inspect
+        @raw_info ||= uinfo.parsed
       end
 
       private
