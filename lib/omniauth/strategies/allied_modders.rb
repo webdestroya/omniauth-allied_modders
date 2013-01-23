@@ -40,6 +40,7 @@ module OmniAuth
       info do
         prune!({
           :name       => raw_info['username'],
+          :nickname   => raw_info['username'],
           :email      => verified_email,
           :image      => raw_info['avatar'],
           :urls => {
@@ -55,10 +56,7 @@ module OmniAuth
       end
 
       def raw_info
-        uinfo = access_token.get('https://forums.alliedmods.net/oauth/userinfo.php')
-        puts uinfo.inspect
-        puts uinfo.parsed.inspect
-        @raw_info ||= uinfo.parsed
+        @raw_info ||= access_token.get('https://forums.alliedmods.net/oauth/userinfo.php').parsed
       end
 
       private
